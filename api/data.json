@@ -1,0 +1,86 @@
+[
+    {
+      "name": "Monitor Samsung 24 pulgadas",
+      "description": "resolución 1920 x 1080, 75 Hz de frecuencia",
+      "image": "https://www.macstation.com.ar/img/productos/2610-3.jpg",
+      "price": "52999",
+      "brand": "Samsung"
+    },
+    {
+      "name": "Teclado HyperX Alloy Origins",
+      "description": "Este teclado HyperX de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo.",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_944449-MLA50305077491_062022-O.webp",
+      "price": "14219",
+      "brand": "HyperX"
+    },
+    {
+    "name": "Mouse Logitech G series Lightspeed G305",
+    "description": "El sensor HERO de próxima generación del ratón inalámbrico para gaming G305 LIGHTSPEED ofrece un rendimiento de 12.000 dpi, mientras que la conectividad inalámbrica LIGHTSPEED proporciona una velocidad de respuesta superrápida de 1 ms",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_697642-MLA32148169261_092019-O.webp",
+    "price": "14219",
+    "brand": "Logitech"
+    },
+    {
+    "name": "Gabinete Sentey K20",
+    "description": "Color Negro, Material SPCC 0.6mm",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_988915-MLA47990860801_102021-O.webp",
+    "price": "22499",
+    "brand": "Sentey"
+    },
+    {
+    "name": "Termo Stanley Clásico 1.4 LTS",
+    "description": "Color Verde, 1.4 LTS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_689503-MLA42454895011_072020-O.webp",
+    "price": "33900",
+    "brand": "Stanley"
+    },
+    {
+    "name": "Apple Watch Series 7",
+    "description": "Tiene la pantalla Retina siempre activa más grande y avanzada hasta ahora. Todo se ve increíble y es más fácil de usar.",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_704509-MLA48097051039_112021-O.webp",
+    "price": "119900",
+    "brand": "Apple"
+    },
+    {
+    "name": "Macbook Air M1",
+    "description": "La notebook más delgada y ligera de Apple viene con los superpoderes del chip M1.",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_684862-MLA46516504419_062021-O.webp",
+    "price": "418000",
+    "brand": "Apple"
+    },
+    {
+    "name": "iPhone 13 Pro Max",
+    "description": "El mayor avance en el sistema de cámaras Pro hasta ahora. Pantalla Super Retina XDR con ProMotion que brinda una respuesta más rápida y fluida.",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_799027-MLA47776845273_102021-O.webp",
+    "price": "534643",
+    "brand": "Apple"
+    },
+    {
+    "name": "Jordan 1 Retro High Og Brotherhood",
+    "description": "Talle: 42 arg 27 cm 10 us, color: naranja",
+    "image": "https://i0.wp.com/iceclub.com.ar/wp-content/uploads/2022/05/223-highbrotherhood.jpg?resize=600%2C600&ssl=1",
+    "price": "112000",
+    "brand": "Jordan"
+    },
+    {
+    "name": "Campera The North Face",
+    "description": "Talle: L, color: bordo",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_968411-MLA50712337337_072022-O.webp",
+    "price": "144999",
+    "brand": "The North face"
+    },
+    {
+    "name": "Mochila Elemental Air Nike",
+    "description": "Color: Negro",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_610838-MLA49878173086_052022-O.webp",
+    "price": "8499",
+    "brand": "Nike"
+    },
+    {
+    "name": "Zapatillas Nike",
+    "description": "Talle: 42 arg 27 cm 10 us, color: negro",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_776658-MLA46981173780_082021-O.webp",
+    "price": "46199",
+    "brand": "Nike"
+    }
+]

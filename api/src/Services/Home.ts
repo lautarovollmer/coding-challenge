@@ -1,12 +1,36 @@
 import { Request, Response } from "express";
 import { QueryResult } from 'pg';
+import * as data from '../../data.json'
 
 import { pool } from "../db";
+
+interface MyObject{
+    name: string,
+    description: string,
+    image: string,
+    price: string
+}
+
+
+const dataToDb = async (data: any) => {
+    try{
+        const myObject: MyObject = data.map((e: any) => {
+            e.name,
+            e.description,
+            e.image,
+            e.price
+        });
+        return myObject
+    }catch(error){
+        console.log(error);
+    };
+}
 
 export const getProducts = async (req : Request, res : Response): Promise<Response> => {
     try {
         const response : QueryResult = await pool.query('SELECT * FROM products');
-        console.log(response.rows);
+        const myData = await dataToDb(data);
+        // console.log(myData)
         return res.status(200).json(response.rows);
     } catch(error){
         console.log(error);
@@ -23,5 +47,5 @@ export const getProductsById = async (req: Request, res: Response) => {
 export const createProducts = async(req: Request, res: Response) => {
     const { name, description, image, price, brand } = req.body;
     const response: QueryResult = await pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)',[name, description, image, price, brand])
-    return res.send(response)
+    return res.send('recived')
 }
