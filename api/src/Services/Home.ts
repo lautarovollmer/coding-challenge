@@ -19,3 +19,9 @@ export const getProductsById = async (req: Request, res: Response) => {
     const response: QueryResult = await pool.query('SELECT * FROM products WHERE id = $1', [id]);
     return  res.json(response.rows);
 }
+
+export const createProducts = async(req: Request, res: Response) => {
+    const { name, description, image, price, brand } = req.body;
+    const response: QueryResult = await pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)',[name, description, image, price, brand])
+    return res.send(response)
+}

@@ -4,144 +4,144 @@
           "product": {
             "name": "Monitor Samsung 24 pulgadas",
             "description": "resolución 1920 x 1080, 75 Hz de frecuencia",
-            "image_url": "https://www.macstation.com.ar/img/productos/2610-3.jpg",
+            "image": "https://www.macstation.com.ar/img/productos/2610-3.jpg",
             "price": 52999
           },
           "brand": {
             "name": "Samsung",
-            "logo_url": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/360_197_1.png?$FB_TYPE_B_PNG$"
+            "logo": "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/360_197_1.png?$FB_TYPE_B_PNG$"
           }
         },
         {
             "product": {
               "name": "Teclado HyperX Alloy Origins",
               "description": "Este teclado HyperX de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo.",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_944449-MLA50305077491_062022-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_944449-MLA50305077491_062022-O.webp",
               "price": 14219
             },
             "brand": {
               "name": "HyperX",
-              "logo_url": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+              "logo": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
             }
           },
           {
             "product": {
               "name": "Mouse Logitech G series Lightspeed G305",
               "description": "El sensor HERO de próxima generación del ratón inalámbrico para gaming G305 LIGHTSPEED ofrece un rendimiento de 12.000 dpi, mientras que la conectividad inalámbrica LIGHTSPEED proporciona una velocidad de respuesta superrápida de 1 ms",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_697642-MLA32148169261_092019-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_697642-MLA32148169261_092019-O.webp",
               "price": 14219
             },
             "brand": {
               "name": "Logitech",
-              "logo_url": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo.png"
+              "logo": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo.png"
             }
           },
           {
             "product": {
               "name": "Gabinete Sentey K20",
               "description": "Color Negro, Material SPCC 0.6mm",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_988915-MLA47990860801_102021-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_988915-MLA47990860801_102021-O.webp",
               "price": 22499
             },
             "brand": {
               "name": "Sentey",
-              "logo_url": "data:image/png;base64,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"
+              "logo": "data:image/png;base64,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"
             }
           },
           {
             "product": {
               "name": "Termo Stanley Clásico 1.4 LTS",
               "description": "Color Verde, 1.4 LTS",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_689503-MLA42454895011_072020-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_689503-MLA42454895011_072020-O.webp",
               "price": 33900
             },
             "brand": {
               "name": "Stanley",
-              "logo_url": "https://dv772gxvb559g.cloudfront.net/fotos/jpg/600/termo-stanley-clasico-1-4lts-c-asa-plegable-negro-pa-24874_5.jpg"
+              "logo": "https://dv772gxvb559g.cloudfront.net/fotos/jpg/600/termo-stanley-clasico-1-4lts-c-asa-plegable-negro-pa-24874_5.jpg"
             }
           },
           {
             "product": {
               "name": "Apple Watch Series 7",
               "description": "Tiene la pantalla Retina siempre activa más grande y avanzada hasta ahora. Todo se ve increíble y es más fácil de usar.",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_704509-MLA48097051039_112021-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_704509-MLA48097051039_112021-O.webp",
               "price": 119900
             },
             "brand": {
               "name": "Apple",
-              "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
             }
           },
           {
             "product": {
               "name": "Macbook Air M1",
               "description": "La notebook más delgada y ligera de Apple viene con los superpoderes del chip M1.",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_684862-MLA46516504419_062021-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_684862-MLA46516504419_062021-O.webp",
               "price": 418000
             },
             "brand": {
               "name": "Apple",
-              "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
             }
           },
           {
             "product": {
               "name": "iPhone 13 Pro Max",
               "description": "El mayor avance en el sistema de cámaras Pro hasta ahora. Pantalla Super Retina XDR con ProMotion que brinda una respuesta más rápida y fluida.",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_799027-MLA47776845273_102021-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_799027-MLA47776845273_102021-O.webp",
               "price": 534643
             },
             "brand": {
               "name": "Apple",
-              "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
             }
           },
           {
             "product": {
               "name": "Jordan 1 Retro High Og Brotherhood",
               "description": "Talle: 42 arg 27 cm 10 us, color: naranja",
-              "image_url": "https://i0.wp.com/iceclub.com.ar/wp-content/uploads/2022/05/223-highbrotherhood.jpg?resize=600%2C600&ssl=1",
+              "image": "https://i0.wp.com/iceclub.com.ar/wp-content/uploads/2022/05/223-highbrotherhood.jpg?resize=600%2C600&ssl=1",
               "price": 112000
             },
             "brand": {
               "name": "Jordan",
-              "logo_url": "https://1000marcas.net/wp-content/uploads/2020/01/Air-Jordan-logo.png"
+              "logo": "https://1000marcas.net/wp-content/uploads/2020/01/Air-Jordan-logo.png"
             }
           },
           {
             "product": {
               "name": "Campera The North Face",
               "description": "Talle: L, color: bordo",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_968411-MLA50712337337_072022-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_968411-MLA50712337337_072022-O.webp",
               "price": 144999
             },
             "brand": {
               "name": "The North face",
-              "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/TheNorthFace_logo.svg/2048px-TheNorthFace_logo.svg.png"
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/TheNorthFace_logo.svg/2048px-TheNorthFace_logo.svg.png"
             }
           },
           {
             "product": {
               "name": "Mochila Elemental Air Nike",
               "description": "Color: Negro",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_610838-MLA49878173086_052022-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_610838-MLA49878173086_052022-O.webp",
               "price": 8499
             },
             "brand": {
               "name": "Nike",
-              "logo_url": "https://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg"
+              "logo": "https://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg"
             }
           },
           {
             "product": {
               "name": "Zapatillas Nike",
               "description": "Talle: 42 arg 27 cm 10 us, color: negro",
-              "image_url": "https://http2.mlstatic.com/D_NQ_NP_776658-MLA46981173780_082021-O.webp",
+              "image": "https://http2.mlstatic.com/D_NQ_NP_776658-MLA46981173780_082021-O.webp",
               "price": 46199
             },
             "brand": {
               "name": "Nike",
-              "logo_url": "https://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg"
+              "logo": "https://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg"
             }
           }
           

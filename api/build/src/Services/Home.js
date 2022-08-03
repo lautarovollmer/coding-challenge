@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getProductsById = exports.getProducts = void 0;
+exports.createProducts = exports.getProductsById = exports.getProducts = void 0;
 const db_1 = require("../db");
 const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -30,3 +30,9 @@ const getProductsById = (req, res) => __awaiter(void 0, void 0, void 0, function
     return res.json(response.rows);
 });
 exports.getProductsById = getProductsById;
+const createProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { name, description, image, price, brand } = req.body;
+    const response = yield db_1.pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)', [name, description, image, price, brand]);
+    return res.send(response);
+});
+exports.createProducts = createProducts;
