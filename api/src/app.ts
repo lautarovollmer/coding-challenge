@@ -1,16 +1,12 @@
 import express from 'express';
-import routes from './routes/index';
+import routes from './Controllers/index';
 
 const server = express();
 
-server.use('/', routes);
+//Middlewares
+server.use(express.json());
+server.use(express.urlencoded({extended: false}));
 
-server.use((err : any, req : any, res : any, next : any) => {
-    // eslint-disable-line no-unused-vars
-    const status = err.status || 500;
-    const message = err.message || err;
-    console.error(err);
-    res.status(status).send(message);
-});
+server.use('/', routes);
 
 export default server;
