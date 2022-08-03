@@ -9,13 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getProducts = void 0;
+exports.getProductsById = exports.getProducts = void 0;
 const db_1 = require("../db");
 const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const response = yield db_1.pool.query('SELECT * FROM products');
         console.log(response.rows);
-        res.status(200).json(response.rows);
+        return res.status(200).json(response.rows);
     }
     catch (error) {
         console.log(error);
@@ -24,3 +24,9 @@ const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     ;
 });
 exports.getProducts = getProducts;
+const getProductsById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const id = parseInt(req.params.id);
+    const response = yield db_1.pool.query('SELECT * FROM products WHERE id = $1', [id]);
+    return res.json(response.rows);
+});
+exports.getProductsById = getProductsById;

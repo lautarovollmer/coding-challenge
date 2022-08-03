@@ -32,6 +32,6 @@ exports.pool = new pg_1.Pool({
     user: DB_USER,
     host: DB_HOST,
     password: String(DB_PASSWORD),
-    database: DB_HOST,
+    database: DB_NAME,
     port: 5432
 });

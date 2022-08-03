@@ -1,8 +1,12 @@
 import {Router} from "express";
-import { getProducts } from '../Services/Home'
+import { getProducts, getProductsById } from '../Services/Home'
 
 const router = Router();
 
-router.get('/home', getProducts);
+router.get('/products', getProducts);
+router.get('/products/:id', getProductsById);
+router.put('/products', getProducts);
+router.post('/products', getProducts);
+router.delete('/home:id', getProducts);
 
 export default router;
