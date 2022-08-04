@@ -39,6 +39,7 @@ const express_1 = __importDefault(require("express"));
 const index_1 = __importDefault(require("./Controllers/index"));
 const info = __importStar(require("../data.json"));
 const db_1 = require("./db");
+const cors = require('cors');
 const server = (0, express_1.default)();
 const dataToDb = (info) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -73,7 +74,15 @@ const getDataLoad = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 getDataLoad();
 //Middlewares
+server.use(cors());
 server.use(express_1.default.json());
 server.use(express_1.default.urlencoded({ extended: false }));
+server.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // update to match the domain you will make the request from
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 server.use('/', index_1.default);
 exports.default = server;

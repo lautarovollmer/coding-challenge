@@ -10,7 +10,6 @@ export const getAllRecives = () => {
   return async function (dispatch: any) {
     try {
       const products = await axios.get("http://localhost:3001/products");
-      console.log(products.data);
       return dispatch({
         type: GET_ALL_PRODUCTS,
         payload: products.data,
