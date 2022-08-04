@@ -72,8 +72,9 @@ exports.deleteProducts = deleteProducts;
 const editProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const id = parseInt(req.params.id);
+        console.log(id);
         const { name, description, image, price, brand } = req.body;
-        yield db_1.pool.query('UPDATE products SET name = $1, description = $2, image = $3, price = $4, brand = $5 WHERE id = 6', [name, description, image, price, brand, id]);
+        yield db_1.pool.query(`UPDATE products SET name = $1, description = $2, image = $3, price = $4, brand = $5 WHERE id = ${id}`, [name, description, image, price, brand]);
         res.send(`Products ${id} Update Successfully`);
     }
     catch (error) {

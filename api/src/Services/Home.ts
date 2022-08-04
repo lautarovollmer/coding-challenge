@@ -69,9 +69,10 @@ export const deleteProducts = async(req: Request, res: Response) => {
 export const editProducts = async(req: Request, res: Response) => {
     try{
         const id = parseInt(req.params.id);
+        console.log(id)
         const { name, description, image, price, brand } = req.body;
 
-       await pool.query('UPDATE products SET name = $1, description = $2, image = $3, price = $4, brand = $5 WHERE id = 6', [name, description, image, price, brand, id]);
+       await pool.query(`UPDATE products SET name = $1, description = $2, image = $3, price = $4, brand = $5 WHERE id = ${id}`, [name, description, image, price, brand]);
        res.send(`Products ${id} Update Successfully`);
     }catch(error){
         console.log(error)
