@@ -1,6 +1,7 @@
-import { Request, Response } from "express";
+import { Request, response, Response } from "express";
+import { request } from "http";
 import { QueryResult } from 'pg';
-import * as data from '../../data.json'
+import * as info from '../../data.json'
 
 import { pool } from "../db";
 
@@ -9,17 +10,17 @@ interface MyObject{
     description: string,
     image: string,
     price: string
-}
+};
 
-
-const dataToDb = async (data: any) => {
+const dataToDb = async ( info : any ) => {
     try{
-        const myObject: MyObject = data.map((e: any) => {
-            e.name,
-            e.description,
-            e.image,
-            e.price
-        });
+        const myObject = info.default.map((e: any) => {
+            return{
+                name: e.name,
+                description: e.description,
+                image: e.image,
+                price: e.price
+            }});
         return myObject
     }catch(error){
         console.log(error);
@@ -28,9 +29,13 @@ const dataToDb = async (data: any) => {
 
 export const getProducts = async (req : Request, res : Response): Promise<Response> => {
     try {
+        // const myData = await dataToDb(info);
+        // await myData?.map( (element: any) => {
+        //         pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)',
+        //     [element.name, element.description, element.image, element.price, element.brand]);
+        // });
+
         const response : QueryResult = await pool.query('SELECT * FROM products');
-        const myData = await dataToDb(data);
-        // console.log(myData)
         return res.status(200).json(response.rows);
     } catch(error){
         console.log(error);
@@ -48,4 +53,27 @@ export const createProducts = async(req: Request, res: Response) => {
     const { name, description, image, price, brand } = req.body;
     const response: QueryResult = await pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)',[name, description, image, price, brand])
     return res.send('recived')
+}
+
+export const deleteProducts = async(req: Request, res: Response) => {
+    try{
+        const id = parseInt(req.params.id);
+        await pool.query('DELETE FROM products WHERE id = $1', [id]);
+        res.json(`Products ${id} deleted Successfully`)
+
+    } catch(error){
+        console.log(error)
+    }
+}
+
+export const editProducts = async(req: Request, res: Response) => {
+    try{
+        const id = parseInt(req.params.id);
+        const { name, description, image, price, brand } = req.body;
+
+       await pool.query('UPDATE products SET name = $1, description = $2, image = $3, price = $4, brand = $5 WHERE id = 6', [name, description, image, price, brand, id]);
+       res.send(`Products ${id} Update Successfully`);
+    }catch(error){
+        console.log(error)
+    }
 }

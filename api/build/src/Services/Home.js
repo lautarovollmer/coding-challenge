@@ -1,27 +1,4 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -32,16 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createProducts = exports.getProductsById = exports.getProducts = void 0;
-const data = __importStar(require("../../data.json"));
+exports.editProducts = exports.deleteProducts = exports.createProducts = exports.getProductsById = exports.getProducts = void 0;
 const db_1 = require("../db");
-const dataToDb = (data) => __awaiter(void 0, void 0, void 0, function* () {
+;
+const dataToDb = (info) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const myObject = data.map((e) => {
-            e.name,
-                e.description,
-                e.image,
-                e.price;
+        const myObject = info.default.map((e) => {
+            return {
+                name: e.name,
+                description: e.description,
+                image: e.image,
+                price: e.price
+            };
         });
         return myObject;
     }
@@ -52,9 +31,12 @@ const dataToDb = (data) => __awaiter(void 0, void 0, void 0, function* () {
 });
 const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        // const myData = await dataToDb(info);
+        // await myData?.map( (element: any) => {
+        //         pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)',
+        //     [element.name, element.description, element.image, element.price, element.brand]);
+        // });
         const response = yield db_1.pool.query('SELECT * FROM products');
-        const myData = yield dataToDb(data);
-        // console.log(myData)
         return res.status(200).json(response.rows);
     }
     catch (error) {
@@ -76,3 +58,26 @@ const createProducts = (req, res) => __awaiter(void 0, void 0, void 0, function*
     return res.send('recived');
 });
 exports.createProducts = createProducts;
+const deleteProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const id = parseInt(req.params.id);
+        yield db_1.pool.query('DELETE FROM products WHERE id = $1', [id]);
+        res.json(`Products ${id} deleted Successfully`);
+    }
+    catch (error) {
+        console.log(error);
+    }
+});
+exports.deleteProducts = deleteProducts;
+const editProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const id = parseInt(req.params.id);
+        const { name, description, image, price, brand } = req.body;
+        yield db_1.pool.query('UPDATE products SET name = $1, description = $2, image = $3, price = $4, brand = $5 WHERE id = 6', [name, description, image, price, brand, id]);
+        res.send(`Products ${id} Update Successfully`);
+    }
+    catch (error) {
+        console.log(error);
+    }
+});
+exports.editProducts = editProducts;
