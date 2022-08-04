@@ -1,8 +1,9 @@
 import Card from "../Cards/Cards";
+import "../ProductCard/ProductCard.css"
 
 export default function ProductsCards({allProducts}: any) {
-    console.log(allProducts)
-    return (<div>
+    
+    return (<div className="cardContainer">
         {allProducts && 
             allProducts.map((p: any) => { 
                 return <Card 

@@ -3,6 +3,7 @@ import routes from './Controllers/index';
 import * as info from '../data.json'
 import { pool } from "./db";
 
+
 const cors = require('cors');
 const server = express();
 

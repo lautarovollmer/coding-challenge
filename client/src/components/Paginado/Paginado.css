@@ -1,0 +1,22 @@
+.page-item {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .page-item a {
+    margin-top: 12px;
+  border-radius: 6px;
+  width: 80%;
+  min-height: 5vh;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .page-item a.active {
+    color: #72e9ad;
+    border-radius: 5px;
+  }
+  .page-item a:hover:not(.active) {
+    background-color: #72e9ad;
+  }
