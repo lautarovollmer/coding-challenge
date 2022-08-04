@@ -12,30 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.editProducts = exports.deleteProducts = exports.createProducts = exports.getProductsById = exports.getProducts = void 0;
 const db_1 = require("../db");
 ;
-const dataToDb = (info) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const myObject = info.default.map((e) => {
-            return {
-                name: e.name,
-                description: e.description,
-                image: e.image,
-                price: e.price
-            };
-        });
-        return myObject;
-    }
-    catch (error) {
-        console.log(error);
-    }
-    ;
-});
 const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // const myData = await dataToDb(info);
-        // await myData?.map( (element: any) => {
-        //         pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)',
-        //     [element.name, element.description, element.image, element.price, element.brand]);
-        // });
         const response = yield db_1.pool.query('SELECT * FROM products');
         return res.status(200).json(response.rows);
     }

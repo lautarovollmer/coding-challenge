@@ -12,30 +12,11 @@ interface MyObject{
     price: string
 };
 
-const dataToDb = async ( info : any ) => {
-    try{
-        const myObject = info.default.map((e: any) => {
-            return{
-                name: e.name,
-                description: e.description,
-                image: e.image,
-                price: e.price
-            }});
-        return myObject
-    }catch(error){
-        console.log(error);
-    };
-}
+
 
 export const getProducts = async (req : Request, res : Response): Promise<Response> => {
     try {
-        // const myData = await dataToDb(info);
-        // await myData?.map( (element: any) => {
-        //         pool.query('INSERT INTO products (name, description, image, price, brand) VALUES($1, $2, $3, $4, $5)',
-        //     [element.name, element.description, element.image, element.price, element.brand]);
-        // });
-
-        const response : QueryResult = await pool.query('SELECT * FROM products');
+       const response : QueryResult = await pool.query('SELECT * FROM products');
         return res.status(200).json(response.rows);
     } catch(error){
         console.log(error);

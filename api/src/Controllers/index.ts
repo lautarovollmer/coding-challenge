@@ -3,6 +3,7 @@ import { getProducts, getProductsById, createProducts, deleteProducts, editProdu
 
 const router = Router();
 
+
 router.get('/products', getProducts);
 router.get('/products/:id', getProductsById);
 router.put('/editproducts/:id', editProducts);
