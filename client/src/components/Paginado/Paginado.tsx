@@ -12,8 +12,8 @@ export default function Paginado ({ productsPerPage, totalProduct, paginate }: a
       <>
         {pageNumbers &&
           pageNumbers.map((number) => (
-            <div key={number} className="page-item">
-              <a onClick={() => paginate(number)} className="page-link">
+            <div key={number} className="page-item" style={{marginLeft: "30px"}}>
+              <a onClick={() => paginate(number)} className="page-link" style={{marginLeft: "30px"}}>
                 {number}
               </a>
             </div>
