@@ -43,7 +43,7 @@ export default function Home() {
             <Link to='/login'>
             <button className="restart" >Login</button>
             </Link>
-           <button className="restart"  >
+           <button className="restart" style={{marginLeft:"50px"}} >
             {isAdmin ? <Link to={`/add`}>Add</Link> : <></>} 
             </button>
            <div>

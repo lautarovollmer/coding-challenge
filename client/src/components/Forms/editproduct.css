@@ -1,100 +1,19 @@
-.style {
-    background-color: white;
-    width: 1000px;
-    margin: 0 auto;
-    margin-top: 60px;
-    font-family: "Nunito", sans-serif;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    border-radius: 30px;
-    box-shadow: 1px 1px 10px #17d7a0;
-    margin-bottom: 30px;
-  }
+.formcontainer{
+  border: 2px solid #d3d3d3;
+  border-radius: .5em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 1em;
+  text-align: left;
+  width: 22rem;
+}
 
-  .cardConteiner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  
-  .homeC {
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .style-img {
-    width: 150px;
-    padding: 10px;
-    padding-right: 40px;
-    margin-top: 20px;
-  }
-  
-  .stats {
-    display: flex;
-    flex-direction: column;
-    width: inherit;
-    color: black;
-  }
-  
-  .stats h3 {
-    text-transform: capitalize;
-    border-bottom: 2px solid #eee;
-    margin-right: 10px;
-    color: black;
-  }
-  
-  .span {
-    font-family: "Flexo-Bold", arial, sans-serif;
-    font-size: 80%;
-    padding-top: 3px;
-    color: black;
-  }
-  
-  .span-dim {
-    font-family: "Flexo-Bold", arial, sans-serif;
-    font-size: 80%;
-    padding-top: 3px;
-    color: black;
-  }
-  
-  .link-s {
-    margin-top: 20px;
-    width: max-content;
-    font-size: 18px;
-    font-weight: lighter;
-    padding: 8px 35px 8px 35px;
-    background-image: linear-gradient(to right, #9beebb, #17d7a0);
-    border-radius: 30px;
-    border: none;
-    text-decoration: none;
-    color: black;
-    margin-left: 30px;
-  }
-  
-  .link-s:hover {
-    background-image: linear-gradient(to right, #d1e4d8, #17d7a0);
-    box-shadow: 1px 1px 15px #63c9ac;
-  }
-  
-  .types {
-    margin: 0px;
-    padding: 4px 20px 4px 20px;
-    text-transform: capitalize;
-    font-weight: bolder;
-    color: #17d7a0;
-    font-size: 15px;
-  }
-  
-  .style-img {
-    max-width: 400px;
-  }
-  
-  .imgT {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-  }
-  
+.form {
+  padding: 1em;
+}
+ 
+.input{
+width: 20rem;
+}

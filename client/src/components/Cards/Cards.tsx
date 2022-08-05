@@ -33,7 +33,7 @@ export default function Card({ name, description, image, price, brand, id}: any)
         <h4>{brand}</h4>
         <Button color="info">{isAdmin ? <Link to={`/edit/${id}`}>Edit</Link> : <></>}  </Button>
         
-        <Button color="danger" onClick={() => dispatch(deleteProducts(id)) }>Delete</Button>
+        <Button style={{marginTop: "30px"}} color="danger" onClick={() => dispatch(deleteProducts(id)) }>Delete</Button>
         </div>
     )
 }

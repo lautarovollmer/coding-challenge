@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 import { getProductById, addProducts, getAllRecives,cleanDetailsProducts } from '../../redux/action';
 import {validate} from './validate'
+import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 
 export default function AddProducts() {
 	const [error, setError]: any = useState({});
@@ -62,11 +63,11 @@ export default function AddProducts() {
 
 		return (
 			<div>
-				<div>
-					<form onSubmit={(e) => handleSubmit(e)}> 
+				<div className="formcontainer">
+					<Form onSubmit={(e) => handleSubmit(e)}> 
 						<div>
-							<label>Name: </label>
-							<input 
+							<Label>Name: </Label>
+							<Input 
 							 name="name"
 							 type="text"
 							 value={inputs.name}
@@ -76,8 +77,8 @@ export default function AddProducts() {
 							{error.name && <span>{error.name}</span>}
 						</div>
 						<div>
-							<label>Description: </label>
-							<input
+							<Label>Description: </Label>
+							<Input
 							name="description"
 							type="text"
 							value={inputs.description}
@@ -87,8 +88,8 @@ export default function AddProducts() {
 							{error.description && <span>{error.description}</span>}
 						</div>
 						<div>
-							<label>Image</label>
-							<input 
+							<Label>Image</Label>
+							<Input 
 							name="image"
 							type="text"
 							value={inputs.image}
@@ -98,8 +99,8 @@ export default function AddProducts() {
 							{error.img && <span>{error.img}</span>}
 						</div>
 						<div>
-							<label>Price</label>
-							<input 
+							<Label>Price</Label>
+							<Input 
 							name="price"
 							type="text"
 							value={inputs.price}
@@ -109,8 +110,8 @@ export default function AddProducts() {
 							{error.price && <span>{error.price}</span>}
 						</div>
 						<div>
-							<label>Brand</label>
-							<input 
+							<Label>Brand</Label>
+							<Input 
 							name="brand"
 							type="text"
 							value={inputs.brand}
@@ -119,8 +120,8 @@ export default function AddProducts() {
 							/>
 							{error.brand && <span>{error.brand}</span>}
 						</div>
-						<input  type="submit" value="Edit" />
-					</form>
+						<Input style={{marginTop: "30px"}} type="submit" value="Add" />
+					</Form>
 				</div>
 			</div>
 		)
