@@ -4,7 +4,8 @@ import { getAllRecives } from '../../redux/action'
 import Paginado from '../Paginado/Paginado';
 import ProductsCards from '../ProductCard/ProductCard';
 import '../Home/Home.css'
-import Login from '../Login/Login';
+import { Link } from 'react-router-dom';
+
 
 export default function Home() {
     const dispatch: any = useDispatch();
@@ -13,7 +14,7 @@ export default function Home() {
     const [productsPerPage] = useState(3);
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProduct = allProducts.slice(
+    const currentProduct = allProducts && allProducts.slice(
       indexOfFirstProduct,
       indexOfLastProduct
     );
@@ -31,26 +32,37 @@ export default function Home() {
     useEffect(() => {
         dispatch(getAllRecives())
     },[])
-console.log(allProducts);
+
     return (
         <>
         <div className="home">
             <h1>IT Challenge Crowd</h1>
-            <Login />
-            <div>
-
-            {
-                allProducts && <ProductsCards allProducts={currentProduct} /> 
-            }
-            </div>
+            <Link to='/login'>
+            <button>Login</button>
+            </Link>
+           <div>
             
-        </div>
-          
-            <div>
+              {allProducts === "Product not found" && <div>Product not found</div>}
+              {allProducts && allProducts.length > 0 && Array.isArray(allProducts) && (
+              <ProductsCards allProducts={currentProduct} /> 
+              )}
 
+              {allProducts && allProducts.length === 0 &&  (
+                <div>
+                    <img 
+                        src="https://c.tenor.com/On7kvXhzml4AAAAC/loading-gif.gif"
+                        alt="loadin-pokemons"
+                        height="70"
+                        width="70px"
+                    />
+                </div>
+              )}
+            </div>
+            </div>
+          <div>
             <Paginado
                 productsPerPage={productsPerPage}
-                totalProduct={allProducts.length}
+                totalProduct={allProducts && allProducts.length}
                 paginate={paginate}
             />
             </div>

@@ -76,10 +76,10 @@ export const editProducts = (id: any) => {
   };
 };
 
-export const isAdmin = (objecto: any) => {
+export const isAdmin = () => {
   return async function (dispatch: any) {
     try {
-      const login = {user: "admin", password: 1234}
+      
       dispatch({type: 'IS_ADMIN'})
     } catch(err) {
       console.log(err)

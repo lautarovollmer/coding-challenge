@@ -1,17 +1,27 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 import { isAdmin } from "../../redux/action";
 
 export default function Login() {
     
-    const dispatch = useDispatch
+    const navigate = useNavigate();
+    const dispatch: any = useDispatch()
     const [{username, password}, setCredentials] = useState({
         username: '',
         password: ''
     })
-
-   function handleClick({username,password}: any){
-    dispatch(isAdmin())
+    
+    function handleClick({username,password}: any){
+       console.log({username, password})
+    let data = {username: "admin", password: "1234"}
+    if(data.username === username && data.password === password){
+        dispatch(isAdmin())
+        navigate("/")
+        alert('Welcome admin')
+    }else {
+        alert('Error')
+    }
 }
 
     return(
@@ -26,7 +36,7 @@ export default function Login() {
                 username,
                 password: e.target.value
             })} />
-            <button type="submit">Login</button>
+            <button type="submit" onClick={() => handleClick({username, password})}>Login</button>
         </form>
     )
 }
