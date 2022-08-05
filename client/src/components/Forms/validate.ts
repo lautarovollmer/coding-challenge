@@ -37,10 +37,10 @@ export const validate = (inputs: any) => {
 
   if (Object.keys(errors).length < 1) {
     // @ts-ignore: Unreachable code error
-    errors.isValid = false;
+    errors.isValid = true;
   } else {
     // @ts-ignore: Unreachable code error
-    errors.isValid = true;
+    errors.isValid = false;
   }
 
   return errors;

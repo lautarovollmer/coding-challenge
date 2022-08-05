@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Login from './components/Login/Login';
 import EditProducts from './components/Forms/EditProduct';
+import AddProducts from './components/Forms/AddProducts';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
             <Route path={"/login"} element={<Login />} />
             <Route path={"/editproducts/:id"} element={<ProductDetail />} />
             <Route path={"/edit/:id"} element={<EditProducts />} />
-           </Routes>
+            <Route path={"/add"} element={<AddProducts />} />
+         </Routes>
     </BrowserRouter>
     </div>
   );

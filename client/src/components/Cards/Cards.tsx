@@ -5,6 +5,8 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom'
 import { deleteProducts } from '../../redux/action';
 import "../Cards/card.css"
+import { Button } from 'reactstrap';
+
 
 export default function Card({ name, description, image, price, brand, id}: any) {
 
@@ -29,9 +31,9 @@ export default function Card({ name, description, image, price, brand, id}: any)
         <p>{description}</p>
         <h4>{price}</h4>
         <h4>{brand}</h4>
-        {isAdmin ? <Link to={`/edit/${id}`}>Edit</Link> : <></>}  
-        {isAdmin ? <Link to={`/add/${id}`}>Add</Link> : <></>}  
-        <button onClick={() => dispatch(deleteProducts(id)) }>Delete</button>
+        <Button color="info">{isAdmin ? <Link to={`/edit/${id}`}>Edit</Link> : <></>}  </Button>
+        
+        <Button color="danger" onClick={() => dispatch(deleteProducts(id)) }>Delete</Button>
         </div>
     )
 }

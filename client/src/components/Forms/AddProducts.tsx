@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
-import { getProductById, editProducts, getAllRecives,cleanDetailsProducts } from '../../redux/action';
+import { getProductById, addProducts, getAllRecives,cleanDetailsProducts } from '../../redux/action';
 import {validate} from './validate'
 
-export default function EditProducts() {
+export default function AddProducts() {
 	const [error, setError]: any = useState({});
 	
 	
@@ -13,34 +13,16 @@ export default function EditProducts() {
 	 const [products, setProducts]: any = useState([])
 	 
 	 const dispatch: any = useDispatch();
-	 const params = useParams();
-	
-	
-
-	 
-	 const product = useSelector((store: any) => store.rootReducer.allProducts);
-	 console.log(product);
-	 const idDefault = product.filter((item: any) => item.id === Number(params.id))[0]
-
-	 
-	 
-	 const [inputs, setInputs] = useState({
-		name: idDefault.name,
-		description: idDefault.description,
-		image: idDefault.image,
-		price: idDefault.price,
-		brand: idDefault.brand,
+	    
+     const [inputs, setInputs] = useState({
+		name: '',
+		description: '',
+		image: '',
+		price: '',
+		brand: '',
 	 });
 
-	 function handleChecked(e: any) {
-		if (e.target.checked) {
-			setProducts([...products, e.target.value]);
-		} else {
-		  let pos = products.indexOf(e.target.id);
-		  products.splice(pos, 1);
-		}
-	  }
-
+	 
 	  function handleInputChange(e: any) {
 		setInputs({
 			...inputs,
@@ -58,8 +40,8 @@ export default function EditProducts() {
 			e.preventDefault();
 			console.log(error)
 			if(Object.keys(error).length) {
-				alert('Product edited!');
-				dispatch(editProducts(params.id, inputs));
+				alert('Product created!');
+				dispatch(addProducts(inputs));
 				setInputs({
 					name: "",
 					description: "",
