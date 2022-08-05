@@ -6,6 +6,7 @@ import { getProductById, editProducts, getAllRecives,cleanDetailsProducts } from
 import {validate} from './validate'
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import './editproduct.css'
+import { Link } from 'react-router-dom';
 
 export default function EditProducts() {
 	const [error, setError]: any = useState({});
@@ -82,6 +83,9 @@ export default function EditProducts() {
 
 		return (
 			<div>
+				<Link  to="/">
+                <Button className="link-f">Home</Button>
+              </Link>
 				<div className="formcontainer">
 					<Form onSubmit={(e) => handleSubmit(e)}> 
 						<div>

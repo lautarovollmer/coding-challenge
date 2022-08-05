@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import { getProductById, cleanDetailsProducts } from '../../redux/action'
 import "../ProductDetail/ProductDetail.css"
+import { Button } from 'reactstrap';
 
 export default function ProductDetail() {
     const allProducts = useSelector((state: any) => state.rootReducer.allProducts );
@@ -22,6 +24,10 @@ export default function ProductDetail() {
    
     return (
         <div>
+            <Link to="/">
+                <Button className="link-f">Home</Button>
+              </Link>
+            <div>
             {
                 <>
                  <div className="style">
@@ -52,6 +58,7 @@ export default function ProductDetail() {
                     </>
                 
             }
+            </div>
         </div>
     )
 }

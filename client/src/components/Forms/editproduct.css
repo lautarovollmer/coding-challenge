@@ -17,3 +17,14 @@
 .input{
 width: 20rem;
 }
+
+.link-f {
+  margin-top: 40px;
+  text-decoration: none;
+  font-weight: lighter;
+  padding: 1px 35px 8px 35px;
+  background-image: linear-gradient(to right, #9beebb, #17d7a0);
+  border-radius: 30px;
+  color: black;
+  margin-right: 80%;
+}

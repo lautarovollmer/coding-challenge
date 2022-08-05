@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { getProductById, addProducts, getAllRecives,cleanDetailsProducts } from '../../redux/action';
 import {validate} from './validate'
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Link } from 'react-router-dom';
 
 export default function AddProducts() {
 	const [error, setError]: any = useState({});
@@ -63,6 +64,9 @@ export default function AddProducts() {
 
 		return (
 			<div>
+				<Link  to="/">
+                <Button className="link-f">Home</Button>
+              </Link>
 				<div className="formcontainer">
 					<Form onSubmit={(e) => handleSubmit(e)}> 
 						<div>
