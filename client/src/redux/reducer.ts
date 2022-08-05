@@ -9,7 +9,7 @@ const initialData = {
   allProducts: [],
   allBrands: [],
   assistantProducts: [],
-  productsDetail: [],
+  productsDetail: {},
   isAdmin: false
 };
 
@@ -22,7 +22,7 @@ const initialData = {
         assistantProducts: action.payload,
       };
     case GET_PRODUCTS_ID:
-      return { ...state, pokemon: action.payload };
+      return { ...state, productsDetail: action.payload };
     
     case CLEAN_PRODUCTS_DETAILS :
         return{...state, allProducts: [],}  

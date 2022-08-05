@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { getProductById, addProducts } from '../../redux/action';
-import { validate } from './validate';
+import { useParams } from 'react-router';
+import { getProductById, editProducts } from '../../redux/action';
+import {validate} from './validate'
 
 export default function EditProducts() {
 	const [error, setError]: any = useState({});
+
 
 	const [inputs, setInputs] = useState({
 		name: "",
@@ -18,6 +20,7 @@ export default function EditProducts() {
 	 const [products, setProducts]: any = useState([])
 	 const productsDB = useSelector((store: any) => store.products);
 	 const dispatch: any = useDispatch();
+	 const id = useParams();
 
 	 function handleChecked(e: any) {
 		if (e.target.checked) {
@@ -30,10 +33,11 @@ export default function EditProducts() {
 
 	  function handleInputChange(e: any) {
 		setInputs({
-		  ...inputs,
-		  [e.target.name]: e.target.value,
-		});
-		setError(
+			...inputs,
+			[e.target.name]: e.target.value,
+		  });
+	  
+		  setError(
 			validate({
 			  ...inputs,
 			  [e.target.name]: e.target.value,
@@ -44,7 +48,7 @@ export default function EditProducts() {
 			e.preventDefault();
 			if(!Object.keys(error).length && products.lenght) {
 				alert('Product created!');
-				dispatch(addProducts({...inputs, products: products}));
+				console.log({...inputs, products: products});
 				setInputs({
 					name: "",
 					description: "",
@@ -60,10 +64,15 @@ export default function EditProducts() {
 	
 		}
 
+		useEffect(() => {
+			dispatch(getProductById(id.id))
+		},[id.id])
+		
+
 		return (
 			<div>
 				<div>
-					<form>
+					<form onSubmit={(e) => handleSubmit(e)}>
 						<div>
 							<label>Name: </label>
 							<input 
@@ -119,6 +128,7 @@ export default function EditProducts() {
 							/>
 							{error.brand && <span>{error.brand}</span>}
 						</div>
+						<input  type="submit" value="Edit" />
 					</form>
 				</div>
 			</div>

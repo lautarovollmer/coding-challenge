@@ -38,7 +38,7 @@ export default function Home() {
         <div className="home">
             <h1>IT Challenge Crowd</h1>
             <Link to='/login'>
-            <button>Login</button>
+            <button className="restart" >Login</button>
             </Link>
            <div>
             

@@ -6,7 +6,6 @@ import "../ProductDetail/ProductDetail.css"
 
 export default function ProductDetail() {
     const allProducts = useSelector((state: any) => state.rootReducer.allProducts );
-    console.log(allProducts);
     const dispatch: any = useDispatch();
     const params = useParams()
     
@@ -20,16 +19,16 @@ export default function ProductDetail() {
 
   
     const idDefault = allProducts.filter((item: any) => item.id === Number(params.id))[0]
-    console.log(idDefault,"hola");
+   
     return (
         <div>
             {
                 <>
-                 <div>
-                        <div>
+                 <div className="style">
+                        <div className="stats">
                         {idDefault.name}
                         </div>
-                        <div>
+                        <div className="stats">
                         {idDefault.description}
                         </div>
                     
@@ -42,10 +41,10 @@ export default function ProductDetail() {
                 }
                 alt="img pokemon"
               />    
-                    <div>
+                    <div className="stats">
                     {idDefault.price}
                     </div>
-                    <div>
+                    <div className="stats">
                     {idDefault.brand}
                     </div>
                     

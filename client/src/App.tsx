@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Login from './components/Login/Login';
+import EditProducts from './components/Forms/EditProduct';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
             <Route path={"/"} element={<Home />} />
             <Route path={"/login"} element={<Login />} />
             <Route path={"/editproducts/:id"} element={<ProductDetail />} />
-          </Routes>
+            <Route path={"/edit/:id"} element={<EditProducts />} />
+           </Routes>
     </BrowserRouter>
     </div>
   );
