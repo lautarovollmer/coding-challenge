@@ -4,6 +4,7 @@ import { getAllRecives } from '../../redux/action'
 import Paginado from '../Paginado/Paginado';
 import ProductsCards from '../ProductCard/ProductCard';
 import '../Home/Home.css'
+import Login from '../Login/Login';
 
 export default function Home() {
     const dispatch: any = useDispatch();
@@ -35,6 +36,7 @@ console.log(allProducts);
         <>
         <div className="home">
             <h1>IT Challenge Crowd</h1>
+            <Login />
             <div>
 
             {

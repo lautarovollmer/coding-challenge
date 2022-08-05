@@ -10,6 +10,7 @@ const initialData = {
   allBrands: [],
   assistantProducts: [],
   productsDetail: [],
+  isAdmin: false
 };
 
  function rootReducer(state = initialData, action: any) {
@@ -24,7 +25,9 @@ const initialData = {
       return { ...state, pokemon: action.payload };
     
     case CLEAN_PRODUCTS_DETAILS :
-        return{...state, allProducts: [],}    
+        return{...state, allProducts: [],}  
+    case 'IS_ADMIN' :
+      return{isAdmin: true}    
   
     default:
       return  state ;
