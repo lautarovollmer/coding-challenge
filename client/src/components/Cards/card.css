@@ -4,6 +4,7 @@
     background-image: linear-gradient(to bottom, #eeeeee, #eeeeee);
     text-align: center;
     display: flex;
+    margin-top: 50px;
     flex-direction: column;
     border: 1px solid #aad8d3;
     text-decoration: none;
@@ -27,11 +28,12 @@
   .name {
     margin-right: auto;
     margin-left: auto;
-   font-size: 18px;
+    font-size: 18px;
     font-weight: lighter;
     padding: 8px 35px 8px 35px;
     background-image: linear-gradient(to right, #9beebb, #17d7a0);
     border-radius: 30px;
+    color: rgba(5, 60, 240, 0.919)
   }
   
   .name:hover {

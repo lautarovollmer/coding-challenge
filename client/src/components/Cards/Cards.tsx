@@ -25,15 +25,15 @@ export default function Card({ name, description, image, price, brand, id}: any)
                     alt="not found"
                 />
             </div>
-        <Link to={`/editproducts/${id}`}>
+        <Link to={`/editproducts/${id}`} style={{textDecoration:"none"}} >
             <h2 className="name">{name}</h2>
         </Link>
         <p>{description}</p>
         <h4>{price}</h4>
         <h4>{brand}</h4>
-        <Button color="info">{isAdmin ? <Link to={`/edit/${id}`}>Edit</Link> : <></>}  </Button>
+        {isAdmin ? <Button color="info"> <Link to={`/edit/${id}`} style={{textDecoration:"none", color:"white"}}>Edit</Link> </Button> : <></>}  
         
-        <Button style={{marginTop: "30px"}} color="danger" onClick={() => dispatch(deleteProducts(id)) }>Delete</Button>
+        {isAdmin ? <Button style={{marginTop: "30px"}} color="danger" onClick={() => dispatch(deleteProducts(id)) }>Delete</Button> : <></>}  
         </div>
     )
 }

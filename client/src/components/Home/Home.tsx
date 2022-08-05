@@ -43,9 +43,9 @@ export default function Home() {
             <Link to='/login'>
             <button className="restart" >Login</button>
             </Link>
-           <button className="restart" style={{marginLeft:"50px"}} >
-            {isAdmin ? <Link to={`/add`}>Add</Link> : <></>} 
-            </button>
+            {isAdmin ? <button className="restart" style={{marginLeft:"50px"}} >
+             <Link style={{textDecoration:"none", color:"black"}}to={`/add`}>Add</Link> 
+            </button>: <></>} 
            <div>
             
               {allProducts === "Product not found" && <div>Product not found</div>}
@@ -65,7 +65,7 @@ export default function Home() {
               )}
             </div>
             </div>
-          <div>
+          <div style={{display:"flex", justifyContent:"center"}}>
             <Paginado
                 productsPerPage={productsPerPage}
                 totalProduct={allProducts && allProducts.length}
