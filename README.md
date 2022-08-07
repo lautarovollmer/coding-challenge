@@ -1,10 +1,5 @@
 # IT CROWD Challenge
 
-## Deployment
-
-Backend: [Heroku] ()
-Frontend: [Vercel] ()
-
 Database: PostgresSQL
 
 ## Backend
@@ -68,7 +63,7 @@ The **backend**(developed with express) connects to the postgres **database**, t
 
 **Libraries:**
 
-- [react] to create the different interfaces in a simple and composable way.
+- [react] to create the different interfaces in a simple and composable way. -[typescript] it has a static script, it has an interface and the code can be compiled
 
 **Brief description:**
 The **client** consumes from the **backend** the products stored in the database. You can see in the `/products` route all the _paginated_ products. Each product can be clicked and will take us to a **detailed** route that is responsible for displaying all the data, including the brand of the product. Also in our header there is a button **login** (only for administrator).

@@ -9,6 +9,3 @@ CREATE TABLE products(
     brand TEXT
 );
 
-INSERT INTO products(name, brand)
-    VALUES('Zapas', 'ADIDAS'),
-            ('Zapas', 'NIKE');
